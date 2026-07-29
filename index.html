@@ -65,13 +65,40 @@
 /* mobile-timeline-readable-20260729 */
 @media (max-width: 820px) {
   .catechin-page .timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    border-top: 0;
+    border-left: 0;
+  }
+  .catechin-page .timeline > div {
+    display: block;
+    padding: 14px 12px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 253, 248, 0.62);
+  }
+  .catechin-page .timeline span { line-height: 1.5; }
+  .catechin-page .timeline h3 {
+    margin: 10px 0 6px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .catechin-page .timeline p {
+    max-width: 10em;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: pretty;
+  }
+}
+@media (max-width: 560px) {
+  .catechin-page .timeline {
     grid-template-columns: 1fr;
     max-width: 540px;
     gap: 10px;
     margin-right: auto;
     margin-left: auto;
-    border-top: 0;
-    border-left: 0;
   }
   .catechin-page .timeline > div {
     display: grid;
@@ -79,29 +106,20 @@
     grid-template-areas: "year title" "year description";
     column-gap: 16px;
     padding: 14px 16px;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: rgba(255, 253, 248, 0.62);
   }
   .catechin-page .timeline span {
     grid-area: year;
     align-self: center;
-    line-height: 1.5;
   }
   .catechin-page .timeline h3 {
     grid-area: title;
     margin: 0 0 4px;
     font-size: 19px;
-    line-height: 1.4;
   }
   .catechin-page .timeline p {
     grid-area: description;
     max-width: 12em;
-    font-size: 13px;
     line-height: 1.65;
-    overflow-wrap: normal;
-    word-break: normal;
-    text-wrap: pretty;
   }
 }
 </style>
